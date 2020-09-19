@@ -10,6 +10,10 @@
 		2160C6E225160D980037E767 /* PLDataStructs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2160C6D825160D980037E767 /* PLDataStructs.framework */; };
 		2160C6E725160D980037E767 /* PLDataStructsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C6E625160D980037E767 /* PLDataStructsTests.m */; };
 		2160C6E925160D980037E767 /* PLDataStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2160C6DB25160D980037E767 /* PLDataStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2160C6F925160F470037E767 /* OrderedBTree.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2160C6F725160F460037E767 /* OrderedBTree.hpp */; };
+		2160C6FA25160F470037E767 /* OrderedBTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2160C6F825160F460037E767 /* OrderedBTree.cpp */; };
+		2160C6FD251610240037E767 /* PLOrderedBTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 2160C6FB251610240037E767 /* PLOrderedBTree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2160C6FE251610240037E767 /* PLOrderedBTree.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2160C6FC251610240037E767 /* PLOrderedBTree.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		2160C6E125160D980037E767 /* PLDataStructsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PLDataStructsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2160C6E625160D980037E767 /* PLDataStructsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLDataStructsTests.m; sourceTree = "<group>"; };
 		2160C6E825160D980037E767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2160C6F725160F460037E767 /* OrderedBTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OrderedBTree.hpp; sourceTree = "<group>"; };
+		2160C6F825160F460037E767 /* OrderedBTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OrderedBTree.cpp; sourceTree = "<group>"; };
+		2160C6FB251610240037E767 /* PLOrderedBTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLOrderedBTree.h; sourceTree = "<group>"; };
+		2160C6FC251610240037E767 /* PLOrderedBTree.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PLOrderedBTree.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +79,11 @@
 		2160C6DA25160D980037E767 /* PLDataStructs */ = {
 			isa = PBXGroup;
 			children = (
+				2160C6F625160F460037E767 /* DataStructures */,
 				2160C6DB25160D980037E767 /* PLDataStructs.h */,
 				2160C6DC25160D980037E767 /* Info.plist */,
+				2160C6FB251610240037E767 /* PLOrderedBTree.h */,
+				2160C6FC251610240037E767 /* PLOrderedBTree.mm */,
 			);
 			path = PLDataStructs;
 			sourceTree = "<group>";
@@ -86,6 +97,15 @@
 			path = PLDataStructsTests;
 			sourceTree = "<group>";
 		};
+		2160C6F625160F460037E767 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				2160C6F725160F460037E767 /* OrderedBTree.hpp */,
+				2160C6F825160F460037E767 /* OrderedBTree.cpp */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,7 +113,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2160C6FD251610240037E767 /* PLOrderedBTree.h in Headers */,
 				2160C6E925160D980037E767 /* PLDataStructs.h in Headers */,
+				2160C6F925160F470037E767 /* OrderedBTree.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2160C6FE251610240037E767 /* PLOrderedBTree.mm in Sources */,
+				2160C6FA25160F470037E767 /* OrderedBTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +375,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=iphonesimulator*]" = "arm64 arm64e armv7 armv7s";
 			};
 			name = Debug;
 		};
