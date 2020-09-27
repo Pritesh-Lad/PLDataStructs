@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)createTree:(id)sender;
+- (IBAction)addNodes:(id)sender;
+- (IBAction)removeNodes:(id)sender;
 
 @end
 

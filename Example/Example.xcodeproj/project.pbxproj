@@ -18,6 +18,9 @@
 		2160C76F251774A50037E767 /* ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C76E251774A50037E767 /* ExampleUITests.m */; };
 		2160C78325177BBB0037E767 /* PLDataStructs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2160C78225177BBA0037E767 /* PLDataStructs.framework */; };
 		2160C78425177BBB0037E767 /* PLDataStructs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2160C78225177BBA0037E767 /* PLDataStructs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21AC0FD225204A2D00D36FA7 /* RemoveNodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 21AC0FCF25204A2D00D36FA7 /* RemoveNodes.json */; };
+		21AC0FD325204A2D00D36FA7 /* AddNodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 21AC0FD025204A2D00D36FA7 /* AddNodes.json */; };
+		21AC0FD425204A2D00D36FA7 /* CreateTree.json in Resources */ = {isa = PBXBuildFile; fileRef = 21AC0FD125204A2D00D36FA7 /* CreateTree.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		2160C76E251774A50037E767 /* ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleUITests.m; sourceTree = "<group>"; };
 		2160C770251774A50037E767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2160C78225177BBA0037E767 /* PLDataStructs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLDataStructs.framework; path = ../PLDataStructs.framework; sourceTree = "<group>"; };
+		21AC0FCF25204A2D00D36FA7 /* RemoveNodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RemoveNodes.json; sourceTree = SOURCE_ROOT; };
+		21AC0FD025204A2D00D36FA7 /* AddNodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddNodes.json; sourceTree = SOURCE_ROOT; };
+		21AC0FD125204A2D00D36FA7 /* CreateTree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CreateTree.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		2160C746251774A20037E767 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				21AC0FCE25204A1A00D36FA7 /* Resources */,
 				2160C747251774A20037E767 /* AppDelegate.h */,
 				2160C748251774A20037E767 /* AppDelegate.m */,
 				2160C74A251774A20037E767 /* SceneDelegate.h */,
@@ -162,6 +169,16 @@
 				2160C78225177BBA0037E767 /* PLDataStructs.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21AC0FCE25204A1A00D36FA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21AC0FD125204A2D00D36FA7 /* CreateTree.json */,
+				21AC0FD025204A2D00D36FA7 /* AddNodes.json */,
+				21AC0FCF25204A2D00D36FA7 /* RemoveNodes.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +285,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AC0FD325204A2D00D36FA7 /* AddNodes.json in Resources */,
+				21AC0FD425204A2D00D36FA7 /* CreateTree.json in Resources */,
 				2160C757251774A50037E767 /* LaunchScreen.storyboard in Resources */,
 				2160C754251774A50037E767 /* Assets.xcassets in Resources */,
 				2160C752251774A20037E767 /* Main.storyboard in Resources */,
+				21AC0FD225204A2D00D36FA7 /* RemoveNodes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

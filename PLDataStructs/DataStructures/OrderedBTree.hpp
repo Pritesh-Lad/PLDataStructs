@@ -13,9 +13,19 @@
 #include <string>
 
 class OrderedBTree {
-    std::string status;
+
 public:
-    OrderedBTree();
-    std::string getStatus();
+    OrderedBTree(int nodeValue, std::string hColor);
+    std::string color;
+    int value;
+    OrderedBTree *left;
+    OrderedBTree *right;
+    
+    static OrderedBTree * insertNode(OrderedBTree *tree, int value, std::string color);
+    static void printInorder(OrderedBTree *tree);
+    static void printPreOrder(OrderedBTree *tree);
+    static OrderedBTree * removeNodes(OrderedBTree *tree, int value);
+    static OrderedBTree * removeNodes(OrderedBTree *tree, std::string color);
 };
+
 #endif /* PLOrderedBTree_hpp */

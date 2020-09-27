@@ -11,7 +11,17 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PLOrderedBTree : NSObject
-- (NSString*)greetingString;
++ (PLOrderedBTree*)buildTree:(NSArray*)treeNodes;
+- (PLOrderedBTree*)addNodes:(NSArray*)nodes;
+- (PLOrderedBTree*)removeNodes:(NSArray*)nodes;
+- (void)printPreOrderDescription;
+- (void)printInOrderDescription;
+
+@property (nonatomic, assign, readonly) int value;
+@property (nonatomic, assign, readonly) NSString *hexColor;
+@property (nonatomic, assign, readonly) PLOrderedBTree *leftSubTree;
+@property (nonatomic, assign, readonly) PLOrderedBTree *rightSubTree;
+
 @end
 
 NS_ASSUME_NONNULL_END
