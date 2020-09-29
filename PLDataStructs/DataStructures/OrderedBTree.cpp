@@ -47,8 +47,7 @@ void OrderedBTree::printPreOrder(OrderedBTree *tree) {
     }
 }
 
-int heightOfTree(OrderedBTree *tree)
-{
+int heightOfTree(OrderedBTree *tree) {
     if (tree == NULL)
         return 0;
     return tree->height;
@@ -94,8 +93,7 @@ OrderedBTree *rightRotate(OrderedBTree *node) {
     return leftChild;
 }
 
-int getBalance(OrderedBTree *node)
-{
+int getBalance(OrderedBTree *node) {
     if (node == NULL)
         return 0;
     return heightOfTree(node->left) - heightOfTree(node->right);
