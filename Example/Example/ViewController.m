@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <PLDataStructs/PLDataStructs.h>
+#import "TreeView.h"
+#import "Utility.h"
 
 #define CREATE_TREE_FILE_NAME    @"CreateTree"
 #define ADD_NODES_FILE_NAME      @"AddNodes"
@@ -15,6 +17,8 @@
 
 @interface ViewController ()
 @property (nonatomic, strong) PLOrderedBTree *tree;
+@property (nonatomic, strong) TreeView *treeView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @end
 
 @implementation ViewController
@@ -22,40 +26,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 100, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-100)];
+    [self.view addSubview:self.scrollView];
 }
 
 #pragma mark - Private methods
 - (void)createTree {
-    NSArray *createNodes = [self jsonTreeNodesFromFile:CREATE_TREE_FILE_NAME];
+    NSArray *createNodes = [NSJSONSerialization jsonObjectFromFile:CREATE_TREE_FILE_NAME];
     _tree = [PLOrderedBTree buildTree:createNodes];
+    [self renderTree];
 }
 
 - (void)addNodesToTree {
-    NSArray *nodesToAdd = [self jsonTreeNodesFromFile:ADD_NODES_FILE_NAME];
+    NSArray *nodesToAdd = [NSJSONSerialization jsonObjectFromFile:ADD_NODES_FILE_NAME];
     _tree = [self.tree addNodes:nodesToAdd];
+    [self renderTree];
 }
 
 - (void)removeNodesFromTree {
-    NSArray *nodesToRemove = [self jsonTreeNodesFromFile:REMOVE_NODES_FILE_NAME];
+    NSArray *nodesToRemove = [NSJSONSerialization jsonObjectFromFile:REMOVE_NODES_FILE_NAME];
     _tree = [self.tree removeNodes:nodesToRemove];
+    [self renderTree];
 }
 
-- (NSArray*)jsonTreeNodesFromFile:(NSString*)file{
-    NSArray *nodes;
-    NSError *error;
-    @try {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:file ofType:@"json"];
-        NSString *content = [NSString stringWithContentsOfFile:filePath
-                                                      encoding:NSUTF8StringEncoding
-                                                         error:&error];
-        nodes = [NSJSONSerialization JSONObjectWithData:[content dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers | NSJSONReadingAllowFragments error:&error];
-        if (error) {
-            NSLog(@"Error parsing file data - %@", error.localizedDescription);
-        }
-    } @catch (NSException *exception) {
-        NSLog(@"Exception occurred while parsing file data - %@", exception.reason);
+- (void)renderTree {
+    if (self.treeView) {
+        [self.treeView removeFromSuperview];
+        self.treeView = nil;
     }
-    return nodes;
+    CGFloat deltaX = pow(2, self.tree.height-1)-1;;
+    CGSize contentSize = CGSizeMake(2*deltaX*NODE_SEPARATION + 50, self.tree.height*NODE_SEPARATION + 50);
+    _treeView = [[TreeView alloc] initWithFrame:CGRectMake(0, 0, contentSize.width, contentSize.height) tree:self.tree];
+    [self.scrollView setContentSize:contentSize];
+    [self.scrollView setContentOffset:CGPointMake(self.treeView.center.x-CGRectGetWidth(self.view.frame)/2, 0)];
+    [self.scrollView addSubview:self.treeView];    
 }
 
 #pragma mark - IBActions

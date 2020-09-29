@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) NSString *hexColor;
 @property (nonatomic, assign, readonly) PLOrderedBTree *leftSubTree;
 @property (nonatomic, assign, readonly) PLOrderedBTree *rightSubTree;
-
+@property (nonatomic, assign) int height;
 @end
 
 NS_ASSUME_NONNULL_END
