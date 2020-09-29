@@ -43,9 +43,12 @@
 }
 
 - (PLOrderedBTree*)rightSubTree{
-    return [[PLOrderedBTree alloc] initWithTree:self.tree->left];
+    return [[PLOrderedBTree alloc] initWithTree:self.tree->right];
 }
 
+- (int)height {
+    return self.tree->height;
+}
 #pragma mark - operations
 - (void)printPreOrderDescription {
     NSLog(@"#PreOrderDescription#");

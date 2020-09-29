@@ -18,6 +18,7 @@ public:
     OrderedBTree(int nodeValue, std::string hColor);
     std::string color;
     int value;
+    int height;
     OrderedBTree *left;
     OrderedBTree *right;
     
