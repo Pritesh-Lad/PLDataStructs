@@ -114,7 +114,7 @@ OrderedBTree * OrderedBTree::insertNode(OrderedBTree *tree, int value, std::stri
     // increase the height of parent node by 1
     tree->height = max(heightOfTree(tree->left),
                           heightOfTree(tree->right)) + 1;
-    /*
+    
     // get balance of the tree node
     int balance = getBalance(tree);
     
@@ -130,16 +130,16 @@ OrderedBTree * OrderedBTree::insertNode(OrderedBTree *tree, int value, std::stri
     }
     
     // Single left rotation
-    if (balance > -1 && value > tree->right->value)  {
+    if (balance < -1 && value > tree->right->value)  {
         return leftRotate(tree);
     }
     
     // Right left rotation
-    if (balance > -1 && value < tree->right->value)  {
-        tree->left = rightRotate(tree->right);
+    if (balance < -1 && value < tree->right->value)  {
+        tree->right = rightRotate(tree->right);
         return leftRotate(tree);
     }
-    */
+    
     // Tree is already height-balanced, just return
     return tree;
 }
@@ -181,7 +181,7 @@ OrderedBTree * OrderedBTree::removeNodes(OrderedBTree *tree, int value) {
 //            return removeNode(tree, tree->value);
 //        }
     }
-    /*
+    
     if (tree == NULL)
       return tree;
     
@@ -209,7 +209,7 @@ OrderedBTree * OrderedBTree::removeNodes(OrderedBTree *tree, int value) {
           tree->right = rightRotate(tree->right);
           return leftRotate(tree);
       }
-     */
+     
     return tree;
 }
 

@@ -19,27 +19,31 @@
                                 <rect key="frame" x="20" y="44" width="374" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLH-VK-1DH">
-                                        <rect key="frame" x="0.0" y="22.5" width="80" height="30"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="86" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Create Tree"/>
                                         <connections>
                                             <action selector="createTree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIr-zv-aAk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Moe-MB-uOf">
-                                        <rect key="frame" x="137" y="22.5" width="76" height="30"/>
+                                        <rect key="frame" x="135.5" y="22.5" width="80" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Add Nodes"/>
                                         <connections>
                                             <action selector="addNodes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uCU-XK-nwi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzt-iw-UwP">
-                                        <rect key="frame" x="270" y="22.5" width="104" height="30"/>
+                                        <rect key="frame" x="265" y="22.5" width="109" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Remove Nodes"/>
                                         <connections>
                                             <action selector="removeNodes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKC-As-nrl"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="Sj5-PT-Rsm"/>
                                 </constraints>
