@@ -57,6 +57,7 @@
 		21450FF22525E16400BDBECE /* PLBTreeUtil.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PLBTreeUtil.cpp; sourceTree = "<group>"; };
 		21450FF4252605FC00BDBECE /* PLTreeNodeData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PLTreeNodeData.cpp; sourceTree = "<group>"; };
 		21450FF5252605FC00BDBECE /* PLTreeNodeData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PLTreeNodeData.hpp; sourceTree = "<group>"; };
+		21450FF825261A2B00BDBECE /* PLBTreeUtil.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PLBTreeUtil.hpp; sourceTree = "<group>"; };
 		2160C6D825160D980037E767 /* PLDataStructs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PLDataStructs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2160C6DB25160D980037E767 /* PLDataStructs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLDataStructs.h; sourceTree = "<group>"; };
 		2160C6DC25160D980037E767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2160C6F625160F460037E767 /* DataStructures */,
+				21450FF825261A2B00BDBECE /* PLBTreeUtil.hpp */,
 				21450FF22525E16400BDBECE /* PLBTreeUtil.cpp */,
 				2160C6DB25160D980037E767 /* PLDataStructs.h */,
 				2160C6DC25160D980037E767 /* Info.plist */,

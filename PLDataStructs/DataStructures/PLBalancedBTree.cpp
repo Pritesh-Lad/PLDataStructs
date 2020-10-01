@@ -7,7 +7,7 @@
 //
 
 #include "PLBalancedBTree.hpp"
-#include "../PLBTreeUtil.cpp"
+#include "../PLBTreeUtil.hpp"
 #include <stack>
 #include "PLTreeNodeData.hpp"
 
