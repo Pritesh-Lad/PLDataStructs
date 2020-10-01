@@ -13,12 +13,12 @@
 #define PADDING         50
 
 @interface TreeView()
-@property (nonatomic, strong) PLOrderedBTree *tree;
+@property (nonatomic, strong) PLTreeWrapper *tree;
 @end
 
 @implementation TreeView
 
-- (instancetype)initWithFrame:(CGRect)frame tree:(PLOrderedBTree *)tree{
+- (instancetype)initWithFrame:(CGRect)frame tree:(PLTreeWrapper *)tree{
     self = [super initWithFrame:frame];
     if (self) {
         // Add initialisation code here.
@@ -36,7 +36,7 @@
     [self drawNode:self.tree atPoint:drawPoint];
 }
 
-- (void)drawNode:(PLOrderedBTree*)node atPoint:(CGPoint)point{
+- (void)drawNode:(PLTreeWrapper*)node atPoint:(CGPoint)point{
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, 2.0);
     CGContextSetStrokeColorWithColor(context,

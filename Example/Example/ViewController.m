@@ -16,7 +16,7 @@
 #define REMOVE_NODES_FILE_NAME   @"RemoveNodes"
 
 @interface ViewController ()
-@property (nonatomic, strong) PLOrderedBTree *tree;
+@property (nonatomic, strong) PLTreeWrapper *tree;
 @property (nonatomic, strong) TreeView *treeView;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @end
@@ -33,19 +33,19 @@
 #pragma mark - Private methods
 - (void)createTree {
     NSArray *createNodes = [NSJSONSerialization jsonObjectFromFile:CREATE_TREE_FILE_NAME];
-    _tree = [PLOrderedBTree buildTree:createNodes];
+    _tree = [PLTreeWrapper balancedBTreeWithNodes:createNodes];
     [self renderTree];
 }
 
 - (void)addNodesToTree {
     NSArray *nodesToAdd = [NSJSONSerialization jsonObjectFromFile:ADD_NODES_FILE_NAME];
-    _tree = [self.tree addNodes:nodesToAdd];
+    [self.tree addNodes:nodesToAdd];
     [self renderTree];
 }
 
 - (void)removeNodesFromTree {
     NSArray *nodesToRemove = [NSJSONSerialization jsonObjectFromFile:REMOVE_NODES_FILE_NAME];
-    _tree = [self.tree removeNodes:nodesToRemove];
+    [self.tree removeNodes:nodesToRemove];
     [self renderTree];
 }
 
@@ -65,16 +65,15 @@
 #pragma mark - IBActions
 - (IBAction)createTree:(id)sender {
     [self createTree];
-    [self.tree printPreOrderDescription];
+    [self.tree describeTree:PLTreeDescriptionPreOrder];
 }
 
 - (IBAction)addNodes:(id)sender {
     [self addNodesToTree];
-    [self.tree printPreOrderDescription];
+    [self.tree describeTree:PLTreeDescriptionPreOrder];
 }
 
 - (IBAction)removeNodes:(id)sender {
     [self removeNodesFromTree];
-    [self.tree printPreOrderDescription];
-}
+    [self.tree describeTree:PLTreeDescriptionPreOrder];}
 @end
