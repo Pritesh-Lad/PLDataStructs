@@ -22,16 +22,16 @@ PLBalancedBTree::PLBalancedBTree(PLBTreeNode *rootNode) : PLBTree(rootNode) {
 
 PLBalancedBTree::PLBalancedBTree(std::vector<PLTreeNodeData*> nodesVector) : PLBTree(NULL) {
     for (PLTreeNodeData *data : nodesVector) {
-        root = insertNode(root, data->getValue(), data->getColor());
+        root = insertNode(root, data->value, data->color);
     }
 }
 
 #pragma mark - PLBTree virtual functions implementation
-PLBTree* PLBalancedBTree::getLeftSubtree() {
+PLBalancedBTree * PLBalancedBTree::getLeftSubtree() {
     return (root->left != NULL) ? new PLBalancedBTree(root->left) : NULL;
 }
 
-PLBTree* PLBalancedBTree::getRightSubtree() {
+PLBalancedBTree * PLBalancedBTree::getRightSubtree() {
     return (root->right != NULL) ? new PLBalancedBTree(root->right) : NULL;
 }
 
@@ -48,7 +48,7 @@ void PLBalancedBTree::removeNodes(std::string color) {
 }
 
 #pragma mark  - Private methods
-PLBTreeNode *leftRotate(PLBTreeNode *node) {
+PLBTreeNode * leftRotate(PLBTreeNode *node) {
     PLBTreeNode *rightChild = node->right;
     PLBTreeNode *leftOfRightChild = rightChild->left;
     // Perform rotation
@@ -65,7 +65,7 @@ PLBTreeNode *leftRotate(PLBTreeNode *node) {
     return rightChild;
 }
 
-PLBTreeNode *rightRotate(PLBTreeNode *node) {
+PLBTreeNode * rightRotate(PLBTreeNode *node) {
     PLBTreeNode *leftChild = node->left;
     PLBTreeNode *rightOfLeftChild = leftChild->right;
   

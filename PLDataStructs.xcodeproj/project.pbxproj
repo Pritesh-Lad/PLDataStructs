@@ -131,14 +131,14 @@
 		2160C6F625160F460037E767 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				21450FF5252605FC00BDBECE /* PLTreeNodeData.hpp */,
+				21450FF4252605FC00BDBECE /* PLTreeNodeData.cpp */,
 				2160C6F725160F460037E767 /* PLBTreeNode.hpp */,
 				2160C6F825160F460037E767 /* PLBTreeNode.cpp */,
 				214262AD252507490095D0EE /* PLBTree.hpp */,
 				214262AC252507490095D0EE /* PLBTree.cpp */,
 				214262B1252509210095D0EE /* PLBalancedBTree.hpp */,
 				214262B0252509200095D0EE /* PLBalancedBTree.cpp */,
-				21450FF5252605FC00BDBECE /* PLTreeNodeData.hpp */,
-				21450FF4252605FC00BDBECE /* PLTreeNodeData.cpp */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";

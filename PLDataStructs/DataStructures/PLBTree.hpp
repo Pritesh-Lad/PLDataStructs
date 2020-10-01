@@ -24,8 +24,8 @@ public:
     std::string getColor();
     int getHeight();
     
-    virtual PLBTree *getLeftSubtree() = 0;
-    virtual PLBTree *getRightSubtree() = 0;
+    virtual PLBTree * getLeftSubtree() = 0;
+    virtual PLBTree * getRightSubtree() = 0;
     
     // Describe/Traverse tree
     void printInOrder();

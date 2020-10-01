@@ -25,8 +25,8 @@ public :
     PLBalancedBTree(int value, std::string color);
     PLBalancedBTree(std::vector<PLTreeNodeData*> nodesVector);
     
-    virtual PLBTree *getLeftSubtree();
-    virtual PLBTree *getRightSubtree();
+    virtual PLBalancedBTree * getLeftSubtree();
+    virtual PLBalancedBTree * getRightSubtree();
    //Tree operations
     //Insert value
     virtual void insertNode(int value, std::string color);

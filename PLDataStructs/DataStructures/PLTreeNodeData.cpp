@@ -12,11 +12,3 @@ PLTreeNodeData::PLTreeNodeData(int dataValue, std::string hexColor) {
     value = dataValue;
     color = hexColor;
 }
-
-int PLTreeNodeData::getValue() {
-    return value;
-}
-
-std::string PLTreeNodeData::getColor() {
-    return color;
-}

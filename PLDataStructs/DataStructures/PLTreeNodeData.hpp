@@ -12,12 +12,11 @@
 #include <stdio.h>
 #include <string>
 
-class PLTreeNodeData {
+class PLTreeNodeData {    
+public:
     int value;
     std::string color;
-public:
-    PLTreeNodeData(int dataValue, std::string hexColor);
-    int getValue();
-    std::string getColor();
+    
+    PLTreeNodeData(int dataValue, std::string hexColor);    
 };
 #endif /* PLTreeNodeData_hpp */
