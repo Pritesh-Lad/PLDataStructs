@@ -11,6 +11,9 @@
 
 #include <stdio.h>
 #include "PLBTree.hpp"
+#include <vector>
+
+class PLTreeNodeData;
 
 class PLBalancedBTree : public PLBTree {
 private:
@@ -20,6 +23,7 @@ private:
     PLBTreeNode * removeNodes(PLBTreeNode *tree, std::string color);
 public :
     PLBalancedBTree(int value, std::string color);
+    PLBalancedBTree(std::vector<PLTreeNodeData*> nodesVector);
     
     virtual PLBTree *getLeftSubtree();
     virtual PLBTree *getRightSubtree();

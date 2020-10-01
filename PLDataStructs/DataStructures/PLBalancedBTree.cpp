@@ -9,6 +9,7 @@
 #include "PLBalancedBTree.hpp"
 #include "../PLBTreeUtil.cpp"
 #include <stack>
+#include "PLTreeNodeData.hpp"
 
 #pragma mark - Constructors
 PLBalancedBTree::PLBalancedBTree(int value, std::string color) : PLBTree(value, color){
@@ -17,6 +18,12 @@ PLBalancedBTree::PLBalancedBTree(int value, std::string color) : PLBTree(value, 
 
 PLBalancedBTree::PLBalancedBTree(PLBTreeNode *rootNode) : PLBTree(rootNode) {
     
+}
+
+PLBalancedBTree::PLBalancedBTree(std::vector<PLTreeNodeData*> nodesVector) : PLBTree(NULL) {
+    for (PLTreeNodeData *data : nodesVector) {
+        root = insertNode(root, data->getValue(), data->getColor());
+    }
 }
 
 #pragma mark - PLBTree virtual functions implementation

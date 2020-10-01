@@ -8,6 +8,8 @@
 
 #import "PLTreeWrapper.h"
 #import "PLBalancedBTree.hpp"
+#import "PLTreeNodeData.hpp"
+
 #define NODE_VAL_KEY    @"value"
 #define NODE_COLOR_KEY  @"color"
 
@@ -18,16 +20,15 @@
 @implementation PLTreeWrapper
 
 + (PLTreeWrapper*)balancedBTreeWithNodes:(NSArray*)nodes{
-    NSDictionary *root = nodes[0];
-    int rootValue = [root[NODE_VAL_KEY] intValue];
-    NSString *rootColor = root[NODE_COLOR_KEY];
-    PLBTree *tree = new PLBalancedBTree(rootValue, [rootColor cStringUsingEncoding:[NSString defaultCStringEncoding]]);
-    PLTreeWrapper *wrapperTree = [[PLTreeWrapper alloc] initWithBTree:tree];
-    //Add remaining nodes
-    NSMutableArray *leaves = nodes.mutableCopy;
-    [leaves removeObjectAtIndex:0];
-    [wrapperTree addNodes:leaves];
-    return wrapperTree;
+    std::vector<PLTreeNodeData*> nodeVector;
+    for (NSDictionary *node in nodes) {
+        int value = [node[NODE_VAL_KEY] intValue];
+        NSString *color = node[NODE_COLOR_KEY];
+        PLTreeNodeData *nodeData = new PLTreeNodeData(value, [color cStringUsingEncoding:[NSString defaultCStringEncoding]]);
+        nodeVector.push_back(nodeData);
+    }
+    PLBalancedBTree *tree = new PLBalancedBTree(nodeVector);
+    return [[PLTreeWrapper alloc] initWithBTree:tree];
 }
 
 - (instancetype)initWithBTree:(PLBTree*)bTree {
