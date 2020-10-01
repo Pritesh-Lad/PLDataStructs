@@ -11,16 +11,33 @@
 
 #include <stdio.h>
 #include <string>
-
+/**
+ * Represents a node in a binary tree
+ */
 class PLBTreeNode {
 
 public:
-    PLBTreeNode(int nodeValue, std::string hColor);
-    std::string color;
+    /// Node value
     int value;
+    
+    /// Hex color string in format(#RRGGBB)
+    std::string color;
+    
+    /// Height of the subtree with this node as root
     int height;
+    
+    /// Left subtree
     PLBTreeNode *left;
+    
+    /// Right subtree
     PLBTreeNode *right;
+    
+    /**
+     * Initializes a node with integer value & hex color
+     * @param nodeValue integer value for node
+     * @param hexColor color in hex format(#RRGGBB)
+     */
+    PLBTreeNode(int nodeValue, std::string hexColor);
 };
 
 #endif /* PLOrderedBTree_hpp */

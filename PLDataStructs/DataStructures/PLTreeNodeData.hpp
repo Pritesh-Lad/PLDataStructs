@@ -11,12 +11,22 @@
 
 #include <stdio.h>
 #include <string>
-
+/**
+ * Data model to hold data for a tree node creation
+ */
 class PLTreeNodeData {    
 public:
+    /// Holds integre value for the node
     int value;
+    
+    /// Holds hex color string for the node in the format #RRGGBB
     std::string color;
     
+    /**
+     * Initializes node data with value & hex color
+     * @param dataValue integer value to be used as node value
+     * @param hexColor color in hex format(#RRGGBB)
+     */
     PLTreeNodeData(int dataValue, std::string hexColor);    
 };
 #endif /* PLTreeNodeData_hpp */

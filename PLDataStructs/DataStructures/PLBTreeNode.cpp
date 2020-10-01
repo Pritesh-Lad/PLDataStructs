@@ -9,9 +9,9 @@
 #include "PLBTreeNode.hpp"
 #include <stack>
 
-PLBTreeNode::PLBTreeNode(int nodeValue, std::string hColor) {
+PLBTreeNode::PLBTreeNode(int nodeValue, std::string hexColor) {
     value = nodeValue;
-    color = hColor;    
+    color = hexColor;    
     left = NULL;
     right = NULL;
     height = 1;
