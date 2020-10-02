@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212710BD25275B3B008B6B9B /* PLTreeWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 212710BB25275B3B008B6B9B /* PLTreeWrapper.mm */; };
+		212710C52527611A008B6B9B /* UIColor+Trees.m in Sources */ = {isa = PBXBuildFile; fileRef = 212710C42527611A008B6B9B /* UIColor+Trees.m */; };
+		212710C825276141008B6B9B /* NSJSONSerialization+Trees.m in Sources */ = {isa = PBXBuildFile; fileRef = 212710C725276141008B6B9B /* NSJSONSerialization+Trees.m */; };
+		212710CE25276767008B6B9B /* CreateTree.json in Resources */ = {isa = PBXBuildFile; fileRef = 212710CB25276767008B6B9B /* CreateTree.json */; };
+		212710CF25276767008B6B9B /* RemoveNodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 212710CC25276767008B6B9B /* RemoveNodes.json */; };
+		212710D025276768008B6B9B /* AddNodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 212710CD25276767008B6B9B /* AddNodes.json */; };
 		2160C749251774A20037E767 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C748251774A20037E767 /* AppDelegate.m */; };
 		2160C74C251774A20037E767 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C74B251774A20037E767 /* SceneDelegate.m */; };
 		2160C74F251774A20037E767 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C74E251774A20037E767 /* ViewController.m */; };
@@ -18,11 +24,7 @@
 		2160C76F251774A50037E767 /* ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C76E251774A50037E767 /* ExampleUITests.m */; };
 		2160C78325177BBB0037E767 /* PLDataStructs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2160C78225177BBA0037E767 /* PLDataStructs.framework */; };
 		2160C78425177BBB0037E767 /* PLDataStructs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2160C78225177BBA0037E767 /* PLDataStructs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		21AC0FD225204A2D00D36FA7 /* RemoveNodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 21AC0FCF25204A2D00D36FA7 /* RemoveNodes.json */; };
-		21AC0FD325204A2D00D36FA7 /* AddNodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 21AC0FD025204A2D00D36FA7 /* AddNodes.json */; };
-		21AC0FD425204A2D00D36FA7 /* CreateTree.json in Resources */ = {isa = PBXBuildFile; fileRef = 21AC0FD125204A2D00D36FA7 /* CreateTree.json */; };
 		21AC0FD725232D8300D36FA7 /* TreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AC0FD625232D8200D36FA7 /* TreeView.m */; };
-		21AC0FDA25233E5B00D36FA7 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AC0FD925233E5B00D36FA7 /* Utility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		212710BB25275B3B008B6B9B /* PLTreeWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PLTreeWrapper.mm; sourceTree = "<group>"; };
+		212710BC25275B3B008B6B9B /* PLTreeWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTreeWrapper.h; sourceTree = "<group>"; };
+		212710C32527611A008B6B9B /* UIColor+Trees.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Trees.h"; sourceTree = "<group>"; };
+		212710C42527611A008B6B9B /* UIColor+Trees.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Trees.m"; sourceTree = "<group>"; };
+		212710C625276141008B6B9B /* NSJSONSerialization+Trees.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+Trees.h"; sourceTree = "<group>"; };
+		212710C725276141008B6B9B /* NSJSONSerialization+Trees.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+Trees.m"; sourceTree = "<group>"; };
+		212710CB25276767008B6B9B /* CreateTree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CreateTree.json; sourceTree = "<group>"; };
+		212710CC25276767008B6B9B /* RemoveNodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RemoveNodes.json; sourceTree = "<group>"; };
+		212710CD25276767008B6B9B /* AddNodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddNodes.json; sourceTree = "<group>"; };
 		2160C744251774A20037E767 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2160C747251774A20037E767 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2160C748251774A20037E767 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,13 +87,8 @@
 		2160C76E251774A50037E767 /* ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleUITests.m; sourceTree = "<group>"; };
 		2160C770251774A50037E767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2160C78225177BBA0037E767 /* PLDataStructs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLDataStructs.framework; path = ../PLDataStructs.framework; sourceTree = "<group>"; };
-		21AC0FCF25204A2D00D36FA7 /* RemoveNodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RemoveNodes.json; sourceTree = SOURCE_ROOT; };
-		21AC0FD025204A2D00D36FA7 /* AddNodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddNodes.json; sourceTree = SOURCE_ROOT; };
-		21AC0FD125204A2D00D36FA7 /* CreateTree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CreateTree.json; sourceTree = SOURCE_ROOT; };
 		21AC0FD525232D8200D36FA7 /* TreeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeView.h; sourceTree = "<group>"; };
 		21AC0FD625232D8200D36FA7 /* TreeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeView.m; sourceTree = "<group>"; };
-		21AC0FD825233E5B00D36FA7 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
-		21AC0FD925233E5B00D36FA7 /* Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		212710BE25275EAD008B6B9B /* Trees */ = {
+			isa = PBXGroup;
+			children = (
+				212710BC25275B3B008B6B9B /* PLTreeWrapper.h */,
+				212710BB25275B3B008B6B9B /* PLTreeWrapper.mm */,
+				21AC0FD525232D8200D36FA7 /* TreeView.h */,
+				21AC0FD625232D8200D36FA7 /* TreeView.m */,
+			);
+			path = Trees;
+			sourceTree = "<group>";
+		};
+		212710BF2527603C008B6B9B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				212710C32527611A008B6B9B /* UIColor+Trees.h */,
+				212710C42527611A008B6B9B /* UIColor+Trees.m */,
+				212710C625276141008B6B9B /* NSJSONSerialization+Trees.h */,
+				212710C725276141008B6B9B /* NSJSONSerialization+Trees.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		212710C9252766B5008B6B9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2160C74D251774A20037E767 /* ViewController.h */,
+				2160C74E251774A20037E767 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		212710CA252766CE008B6B9B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2160C747251774A20037E767 /* AppDelegate.h */,
+				2160C748251774A20037E767 /* AppDelegate.m */,
+				2160C74A251774A20037E767 /* SceneDelegate.h */,
+				2160C74B251774A20037E767 /* SceneDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		2160C73B251774A20037E767 = {
 			isa = PBXGroup;
 			children = (
@@ -135,22 +183,16 @@
 		2160C746251774A20037E767 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				212710CA252766CE008B6B9B /* AppDelegate */,
+				212710C9252766B5008B6B9B /* Controllers */,
+				212710BE25275EAD008B6B9B /* Trees */,
+				212710BF2527603C008B6B9B /* Categories */,
 				21AC0FCE25204A1A00D36FA7 /* Resources */,
-				2160C747251774A20037E767 /* AppDelegate.h */,
-				2160C748251774A20037E767 /* AppDelegate.m */,
-				2160C74A251774A20037E767 /* SceneDelegate.h */,
-				2160C74B251774A20037E767 /* SceneDelegate.m */,
-				2160C74D251774A20037E767 /* ViewController.h */,
-				2160C74E251774A20037E767 /* ViewController.m */,
-				21AC0FD525232D8200D36FA7 /* TreeView.h */,
-				21AC0FD625232D8200D36FA7 /* TreeView.m */,
 				2160C750251774A20037E767 /* Main.storyboard */,
 				2160C753251774A50037E767 /* Assets.xcassets */,
 				2160C755251774A50037E767 /* LaunchScreen.storyboard */,
 				2160C758251774A50037E767 /* Info.plist */,
 				2160C759251774A50037E767 /* main.m */,
-				21AC0FD825233E5B00D36FA7 /* Utility.h */,
-				21AC0FD925233E5B00D36FA7 /* Utility.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -184,9 +226,9 @@
 		21AC0FCE25204A1A00D36FA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				21AC0FD125204A2D00D36FA7 /* CreateTree.json */,
-				21AC0FD025204A2D00D36FA7 /* AddNodes.json */,
-				21AC0FCF25204A2D00D36FA7 /* RemoveNodes.json */,
+				212710CB25276767008B6B9B /* CreateTree.json */,
+				212710CD25276767008B6B9B /* AddNodes.json */,
+				212710CC25276767008B6B9B /* RemoveNodes.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -295,12 +337,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21AC0FD325204A2D00D36FA7 /* AddNodes.json in Resources */,
-				21AC0FD425204A2D00D36FA7 /* CreateTree.json in Resources */,
 				2160C757251774A50037E767 /* LaunchScreen.storyboard in Resources */,
 				2160C754251774A50037E767 /* Assets.xcassets in Resources */,
 				2160C752251774A20037E767 /* Main.storyboard in Resources */,
-				21AC0FD225204A2D00D36FA7 /* RemoveNodes.json in Resources */,
+				212710D025276768008B6B9B /* AddNodes.json in Resources */,
+				212710CF25276767008B6B9B /* RemoveNodes.json in Resources */,
+				212710CE25276767008B6B9B /* CreateTree.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,8 +371,10 @@
 				2160C74F251774A20037E767 /* ViewController.m in Sources */,
 				2160C749251774A20037E767 /* AppDelegate.m in Sources */,
 				2160C75A251774A50037E767 /* main.m in Sources */,
-				21AC0FDA25233E5B00D36FA7 /* Utility.m in Sources */,
+				212710C52527611A008B6B9B /* UIColor+Trees.m in Sources */,
+				212710BD25275B3B008B6B9B /* PLTreeWrapper.mm in Sources */,
 				2160C74C251774A20037E767 /* SceneDelegate.m in Sources */,
+				212710C825276141008B6B9B /* NSJSONSerialization+Trees.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

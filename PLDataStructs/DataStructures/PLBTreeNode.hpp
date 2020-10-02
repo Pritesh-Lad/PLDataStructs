@@ -38,6 +38,8 @@ public:
      * @param hexColor color in hex format(#RRGGBB)
      */
     PLBTreeNode(int nodeValue, std::string hexColor);
+    
+    ~PLBTreeNode();
 };
 
 #endif /* PLOrderedBTree_hpp */

@@ -10,7 +10,12 @@
 #define PLBTreeUtil_h
 
 class PLBTreeNode;
-
+/**
+ * Returns maximum of the two integers
+ * @param a first integer to compare
+ * @param b second integer to compare
+ * @return max value
+ */
 int max(int a, int b);
 int heightOfNode(PLBTreeNode *tree);
 int getBalance(PLBTreeNode *node);

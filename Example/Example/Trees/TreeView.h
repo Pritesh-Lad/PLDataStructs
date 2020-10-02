@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <PLDataStructs/PLDataStructs.h>
+#import "PLTreeWrapper.h"
 #define NODE_SEPARATION    50
 
 NS_ASSUME_NONNULL_BEGIN

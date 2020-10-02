@@ -1,31 +1,15 @@
 //
-//  Utility.m
+//  NSJSONSerialization+Trees.m
 //  Example
 //
-//  Created by Pritesh on 29/09/20.
+//  Created by Pritesh on 02/10/20.
 //  Copyright © 2020 pritesh. All rights reserved.
 //
 
-#import "Utility.h"
+#import "NSJSONSerialization+Trees.h"
 
-@implementation Utility
+@implementation NSJSONSerialization (Trees)
 
-@end
-
-@implementation UIColor (TreeColors)
-+ (UIColor *)colorFromHexString:(NSString *)hexString {
-    unsigned rgbValue = 0;
-    NSScanner *scanner = [NSScanner scannerWithString:hexString];
-    [scanner setScanLocation:1]; // skip '#'
-    [scanner scanHexInt:&rgbValue];
-    return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0
-                           green:((rgbValue & 0xFF00) >> 8)/255.0
-                            blue:(rgbValue & 0xFF)/255.0
-                           alpha:1.0];
-}
-@end
-
-@implementation NSJSONSerialization (TreeNodes)
 + (id)jsonObjectFromFile:(NSString*)file{
     id jsonObject;
     NSError *error;

@@ -16,3 +16,8 @@ PLBTreeNode::PLBTreeNode(int nodeValue, std::string hexColor) {
     right = NULL;
     height = 1;
 }
+
+PLBTreeNode::~PLBTreeNode() {
+    delete left;
+    delete right;
+}
