@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TreeView : UIView
-- (instancetype)initWithFrame:(CGRect)frame tree:(PLOrderedBTree*)tree;
+- (instancetype)initWithFrame:(CGRect)frame tree:(PLTreeWrapper*)tree;
 @end
 
 NS_ASSUME_NONNULL_END
