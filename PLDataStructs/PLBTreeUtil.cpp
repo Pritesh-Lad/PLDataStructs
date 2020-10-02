@@ -13,16 +13,16 @@ int max(int a, int b) {
     return (a > b) ? a : b;
 }
 
-int heightOfNode(PLBTreeNode *tree) {
+int heightOfTree(PLBTreeNode *tree) {
     if (tree == NULL)
         return 0;
     return tree->height;
 }
 
-int getBalance(PLBTreeNode *node) {
-    if (node == NULL)
+int getBalance(PLBTreeNode *tree) {
+    if (tree == NULL)
         return 0;
-    return heightOfNode(node->left) - heightOfNode(node->right);
+    return heightOfTree(tree->left) - heightOfTree(tree->right);
 }
 
 PLBTreeNode * getInorderSuccessor(PLBTreeNode *tree) {

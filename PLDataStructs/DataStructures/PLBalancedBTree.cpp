@@ -60,10 +60,10 @@ PLBTreeNode * leftRotate(PLBTreeNode *node) {
     node->right = leftOfRightChild;
   
     // Update heights
-    node->height = max(heightOfNode(node->left),
-                    heightOfNode(node->right)) + 1;
-    rightChild->height = max(heightOfNode(rightChild->left),
-                    heightOfNode(rightChild->right)) + 1;
+    node->height = max(heightOfTree(node->left),
+                    heightOfTree(node->right)) + 1;
+    rightChild->height = max(heightOfTree(rightChild->left),
+                    heightOfTree(rightChild->right)) + 1;
   
     // Return the new root node
     return rightChild;
@@ -81,10 +81,10 @@ PLBTreeNode * rightRotate(PLBTreeNode *node) {
     node->left = rightOfLeftChild;
   
     // Update heights
-    node->height = max(heightOfNode(node->left),
-                    heightOfNode(node->right)) + 1;
-    leftChild->height = max(heightOfNode(leftChild->left),
-                    heightOfNode(leftChild->right)) + 1;
+    node->height = max(heightOfTree(node->left),
+                    heightOfTree(node->right)) + 1;
+    leftChild->height = max(heightOfTree(leftChild->left),
+                    heightOfTree(leftChild->right)) + 1;
   
     // Return new root node
     return leftChild;
@@ -109,7 +109,7 @@ PLBTreeNode * PLBalancedBTree::insertNode(PLBTreeNode *tree, int value, std::str
     }
     
     // Increase the height of the parent node by 1
-    tree->height = max(heightOfNode(tree->left), heightOfNode(tree->right)) + 1;
+    tree->height = max(heightOfTree(tree->left), heightOfTree(tree->right)) + 1;
     // Re-balance the tree
     // Get balance of the tree node
     int balance = getBalance(tree);
@@ -176,8 +176,8 @@ PLBTreeNode * PLBalancedBTree::removeNode(PLBTreeNode *tree, int value) {
         return tree;
     // Re-balance the tree
     // Update the height of current node
-    tree->height = 1 + max(heightOfNode(tree->left),
-                           heightOfNode(tree->right));
+    tree->height = 1 + max(heightOfTree(tree->left),
+                           heightOfTree(tree->right));
     
     int balance = getBalance(tree);
     
