@@ -11,7 +11,9 @@
 
 #include <stdio.h>
 #include <string>
-#include "PLBTreeNode.hpp"
+
+class PLBTreeNode;
+
 /**
  * Base class implementation for a binary tree.
  *

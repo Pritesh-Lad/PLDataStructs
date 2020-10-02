@@ -15,4 +15,7 @@ FOUNDATION_EXPORT double PLDataStructsVersionNumber;
 FOUNDATION_EXPORT const unsigned char PLDataStructsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PLDataStructs/PublicHeader.h>
-#import <PLDataStructs/PLTreeWrapper.h>
+#import <PLDataStructs/PLBTree.hpp>
+#import <PLDataStructs/PLTreeNodeData.hpp>
+#import <PLDataStructs/PLBalancedBTree.hpp>
+

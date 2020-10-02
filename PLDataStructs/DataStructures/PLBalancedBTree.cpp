@@ -10,6 +10,7 @@
 #include "../PLBTreeUtil.hpp"
 #include <stack>
 #include "PLTreeNodeData.hpp"
+#include "PLBTreeNode.hpp"
 
 #pragma mark - Constructors
 PLBalancedBTree::PLBalancedBTree(int value, std::string color) : PLBTree(value, color){

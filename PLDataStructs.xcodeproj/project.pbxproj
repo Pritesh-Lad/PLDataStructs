@@ -22,14 +22,12 @@
 
 /* Begin PBXBuildFile section */
 		214262AE252507490095D0EE /* PLBTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 214262AC252507490095D0EE /* PLBTree.cpp */; };
-		214262AF252507490095D0EE /* PLBTree.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 214262AD252507490095D0EE /* PLBTree.hpp */; };
+		214262AF252507490095D0EE /* PLBTree.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 214262AD252507490095D0EE /* PLBTree.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		214262B2252509210095D0EE /* PLBalancedBTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 214262B0252509200095D0EE /* PLBalancedBTree.cpp */; };
-		214262B3252509210095D0EE /* PLBalancedBTree.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 214262B1252509210095D0EE /* PLBalancedBTree.hpp */; };
-		214262BA252520C70095D0EE /* PLTreeWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 214262B8252520C60095D0EE /* PLTreeWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		214262BB252520C70095D0EE /* PLTreeWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 214262B9252520C70095D0EE /* PLTreeWrapper.mm */; };
+		214262B3252509210095D0EE /* PLBalancedBTree.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 214262B1252509210095D0EE /* PLBalancedBTree.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		21450FF32525E16400BDBECE /* PLBTreeUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21450FF22525E16400BDBECE /* PLBTreeUtil.cpp */; };
 		21450FF6252605FC00BDBECE /* PLTreeNodeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21450FF4252605FC00BDBECE /* PLTreeNodeData.cpp */; };
-		21450FF7252605FC00BDBECE /* PLTreeNodeData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 21450FF5252605FC00BDBECE /* PLTreeNodeData.hpp */; };
+		21450FF7252605FC00BDBECE /* PLTreeNodeData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 21450FF5252605FC00BDBECE /* PLTreeNodeData.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		2160C6E225160D980037E767 /* PLDataStructs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2160C6D825160D980037E767 /* PLDataStructs.framework */; };
 		2160C6E725160D980037E767 /* PLDataStructsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C6E625160D980037E767 /* PLDataStructsTests.m */; };
 		2160C6E925160D980037E767 /* PLDataStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2160C6DB25160D980037E767 /* PLDataStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,8 +50,6 @@
 		214262AD252507490095D0EE /* PLBTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PLBTree.hpp; sourceTree = "<group>"; };
 		214262B0252509200095D0EE /* PLBalancedBTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PLBalancedBTree.cpp; sourceTree = "<group>"; };
 		214262B1252509210095D0EE /* PLBalancedBTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PLBalancedBTree.hpp; sourceTree = "<group>"; };
-		214262B8252520C60095D0EE /* PLTreeWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTreeWrapper.h; sourceTree = "<group>"; };
-		214262B9252520C70095D0EE /* PLTreeWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PLTreeWrapper.mm; sourceTree = "<group>"; };
 		21450FF22525E16400BDBECE /* PLBTreeUtil.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PLBTreeUtil.cpp; sourceTree = "<group>"; };
 		21450FF4252605FC00BDBECE /* PLTreeNodeData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PLTreeNodeData.cpp; sourceTree = "<group>"; };
 		21450FF5252605FC00BDBECE /* PLTreeNodeData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PLTreeNodeData.hpp; sourceTree = "<group>"; };
@@ -113,8 +109,6 @@
 				21450FF22525E16400BDBECE /* PLBTreeUtil.cpp */,
 				2160C6DB25160D980037E767 /* PLDataStructs.h */,
 				2160C6DC25160D980037E767 /* Info.plist */,
-				214262B8252520C60095D0EE /* PLTreeWrapper.h */,
-				214262B9252520C70095D0EE /* PLTreeWrapper.mm */,
 			);
 			path = PLDataStructs;
 			sourceTree = "<group>";
@@ -151,10 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				214262AF252507490095D0EE /* PLBTree.hpp in Headers */,
-				214262BA252520C70095D0EE /* PLTreeWrapper.h in Headers */,
 				214262B3252509210095D0EE /* PLBalancedBTree.hpp in Headers */,
-				2160C6E925160D980037E767 /* PLDataStructs.h in Headers */,
 				21450FF7252605FC00BDBECE /* PLTreeNodeData.hpp in Headers */,
+				2160C6E925160D980037E767 /* PLDataStructs.h in Headers */,
 				2160C6F925160F470037E767 /* PLBTreeNode.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +275,6 @@
 			files = (
 				214262B2252509210095D0EE /* PLBalancedBTree.cpp in Sources */,
 				214262AE252507490095D0EE /* PLBTree.cpp in Sources */,
-				214262BB252520C70095D0EE /* PLTreeWrapper.mm in Sources */,
 				21450FF6252605FC00BDBECE /* PLTreeNodeData.cpp in Sources */,
 				21450FF32525E16400BDBECE /* PLBTreeUtil.cpp in Sources */,
 				2160C6FA25160F470037E767 /* PLBTreeNode.cpp in Sources */,

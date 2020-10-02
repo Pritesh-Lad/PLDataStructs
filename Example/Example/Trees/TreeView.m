@@ -7,7 +7,7 @@
 //
 
 #import "TreeView.h"
-#import "Utility.h"
+#import "UIColor+Trees.h"
 
 #define NODE_DIAMETER   40
 #define PADDING         50

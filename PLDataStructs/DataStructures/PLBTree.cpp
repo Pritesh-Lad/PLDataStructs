@@ -8,6 +8,7 @@
 
 #include "PLBTree.hpp"
 #include "../PLBTreeUtil.hpp"
+#include "PLBTreeNode.hpp"
 
 PLBTree::PLBTree(int value, std::string color) {
     root = new PLBTreeNode(value, color);
