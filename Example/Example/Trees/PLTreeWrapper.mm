@@ -90,7 +90,7 @@
     }
 }
 
-#pragma makrk - Tree Operations
+#pragma mark - Tree Operations
 - (void)addNodes:(NSArray *)nodes {
     for (NSDictionary *treeNode in nodes) {
         int value = [treeNode[NODE_VAL_KEY] intValue];

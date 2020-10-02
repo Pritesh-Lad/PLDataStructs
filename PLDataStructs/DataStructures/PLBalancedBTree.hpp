@@ -56,10 +56,8 @@ private:
     PLBTreeNode * removeNodes(PLBTreeNode *tree, std::string color);
     
 public :
-    /**
-     * @name Constructors
-     */
-    ///@{
+    /// Constructors
+
     /**
      * Initializes a balanced tree with the given value & color for its root node.
      * @param value Root node's value
@@ -73,12 +71,9 @@ public :
      * @see PLTreeNodeData
      */
     PLBalancedBTree(std::vector<PLTreeNodeData*> nodesVector);
-    ///@}
     
-    /**
-     * @name Virtual functions
-     */
-    ///@{
+    /// Virtual functions
+
     /**
      * @return The left subtree of the balanced binary tree.
      */
@@ -107,7 +102,6 @@ public :
      * @param color Color of the nodes to be removed, in hex format(#RRGGBB)
      */
     virtual void removeNodes(std::string color);
-    ///@}
 };
 
 #endif /* PLBalancedBTree_hpp */

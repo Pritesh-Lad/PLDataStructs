@@ -11,7 +11,9 @@
 #define NODE_SEPARATION    50
 
 NS_ASSUME_NONNULL_BEGIN
-
+/**
+ * Renders a tree in a visual format
+ */
 @interface TreeView : UIView
 - (instancetype)initWithFrame:(CGRect)frame tree:(PLTreeWrapper*)tree;
 @end

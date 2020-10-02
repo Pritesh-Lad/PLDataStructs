@@ -55,6 +55,7 @@
     }
     CGFloat deltaX = pow(2, self.tree.height-1)-1;;
     CGSize contentSize = CGSizeMake(2*deltaX*NODE_SEPARATION + 50, self.tree.height*NODE_SEPARATION + 50);
+    // Create the tree view & render the tree.
     _treeView = [[TreeView alloc] initWithFrame:CGRectMake(0, 0, contentSize.width, contentSize.height) tree:self.tree];
     [self.scrollView setContentSize:contentSize];
     [self.scrollView setContentOffset:CGPointMake(self.treeView.center.x-CGRectGetWidth(self.view.frame)/2, 0)];

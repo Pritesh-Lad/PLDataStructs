@@ -45,10 +45,8 @@ public:
      */
     PLBTree(int value, std::string color);
 
-    /**
-     * Tree properties
-     */
-    ///@{
+    /// Tree properties
+         
     /**
      * Returns value of the trees root node
      * @return Root node's integer value
@@ -56,7 +54,7 @@ public:
     int getValue();
 
     /**
-     * Returns color of the trees root node in hex format(#RRGGBB)
+     * Returns color of the tree's root node in hex format(#RRGGBB)
      * @return Root node's hex color
      */
     std::string getColor();
@@ -68,7 +66,7 @@ public:
     int getHeight();
     
     /**
-     * Pure virtual function returning left sub tree
+     * Returns left sub tree of the tree
      *
      * Derived binary tree implementation must implement this function to return the specific
      * tree type.
@@ -78,7 +76,7 @@ public:
     virtual PLBTree * getLeftSubtree() = 0;
     
     /**
-     * Pure virtual function returning right sub tree
+     * Returns right sub tree of the tree
      *
      * Derived binary tree implementation must implement this function to return the specific
      * tree type.
@@ -86,12 +84,9 @@ public:
      * @return An object reference of a subclass of PLBTree
      */
     virtual PLBTree * getRightSubtree() = 0;
-    ///@}
     
-    /**
-     * @name Tree operations
-     */
-    ///@{
+    /// Tree operations
+
     /**
      * Pure virtual function to insert a node into current binary tree.
      *
@@ -125,12 +120,9 @@ public:
      * @see PLBalancedBTree
      */
     virtual void removeNodes(std::string color) = 0;
-    ///@}
     
-    /**
-     * @name Tree traversal
-     */
-    ///@{
+    /// Tree traversals
+     
     /**
      * Prints inorder traversal of the binary tree.
      */
@@ -145,7 +137,6 @@ public:
      * Prints postorder traversal of the binary tree.
      */
     void printPostOrder();
-    ///@}
 };
 
 #endif /* PLBTree_hpp */

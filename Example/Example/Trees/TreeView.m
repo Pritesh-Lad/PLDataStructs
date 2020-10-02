@@ -36,6 +36,11 @@
     [self drawNode:self.tree atPoint:drawPoint];
 }
 
+/**
+ * Draws a tree node & branches to the child nodes.
+ * @param node Tree node to draw
+ * @param point Location in X-Y coordinates to draw the node on the view
+ */
 - (void)drawNode:(PLTreeWrapper*)node atPoint:(CGPoint)point{
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, 2.0);
@@ -77,6 +82,11 @@
     }
 }
 
+/**
+ * Draws a straight line connecting two given points
+ * @param fromPoint Starting point for the line
+ * @param toPoint End point for the line
+ */
 - (void)drawLineFromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, 2.0);
