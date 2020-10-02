@@ -226,8 +226,8 @@
 		21AC0FCE25204A1A00D36FA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				212710CD25276767008B6B9B /* AddNodes.json */,
 				212710CB25276767008B6B9B /* CreateTree.json */,
+				212710CD25276767008B6B9B /* AddNodes.json */,
 				212710CC25276767008B6B9B /* RemoveNodes.json */,
 			);
 			path = Resources;

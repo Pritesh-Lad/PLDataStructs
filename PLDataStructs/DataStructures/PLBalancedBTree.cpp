@@ -94,7 +94,8 @@ PLBTreeNode * PLBalancedBTree::insertNode(PLBTreeNode *tree, int value, std::str
         tree->right = insertNode(tree->right, value, color);
     } else {
         //equal value, update the node
-        return new PLBTreeNode(value, color);
+        tree->color = color;
+        return tree;
     }
     
     // increase the height of parent node by 1
