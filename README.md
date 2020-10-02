@@ -89,3 +89,9 @@ PLBalancedBTree *left = tree->getLeftSubtree();
 // right subtree
 PLBalancedBTree *right = tree->getRightSubtree();
 ```
+
+## API documentation
+A detailed API documentation is available [here](https://pritesh-lad.github.io/PLDataStructs/)
+
+## Example
+You may also refer the [sample Xcode project](https://github.com/Pritesh-Lad/PLDataStructs/tree/master/Example) demonstrating the use of the library.
