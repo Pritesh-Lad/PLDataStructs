@@ -27,7 +27,7 @@ PLBalancedBTree *tree = new PLBalancedBTree(5, "#FF0000");
 
 2. Creating with a list(`std::vector`) of nodes(first node being a root node) -
 ```
-vector<PLTreeNodeData*> vector; 
+std::vector<PLTreeNodeData*> vector; 
 # create data for each node
 PLTreeNodeData *node1 = new PLTreeNodeData( 5, "#FF0000");
 PLTreeNodeData *node2 = new PLTreeNodeData( 1, "#00FF00");
@@ -42,7 +42,7 @@ PLBalancedBTree *tree = new PLBalancedBTree(vector);
 
 ### Adding a new node to a tree -
 ```
-tree->insertNode(10, "#23244");
+tree->insertNode(10, "#00FF00");
 ```
 
 ### Remove a node from a tree -
