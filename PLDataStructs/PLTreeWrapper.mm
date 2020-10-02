@@ -40,6 +40,10 @@
     return self;
 }
 
+- (void)dealloc {
+    _tree = nil;
+}
+
 #pragma mark - Tree properties
 - (int)value {
     return  self.tree->getValue();

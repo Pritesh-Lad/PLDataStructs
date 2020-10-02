@@ -89,8 +89,11 @@ PLBTreeNode * PLBalancedBTree::insertNode(PLBTreeNode *tree, int value, std::str
     }
     if (value < tree->value) {
         tree->left = insertNode(tree->left, value, color);
-    } else {
+    } else if (value > tree->value){
         tree->right = insertNode(tree->right, value, color);
+    } else {
+        //equal value, update the node
+        return new PLBTreeNode(value, color);
     }
     
     // increase the height of parent node by 1
@@ -134,26 +137,25 @@ PLBTreeNode * PLBalancedBTree::removeNode(PLBTreeNode *tree, int value) {
         tree->left = removeNode(tree->left, value);
     } else if (value > tree->value) {
         tree->right = removeNode(tree->right, value);
-    } else {//value = tree->value
-        if (tree->left == NULL) {
-            PLBTreeNode *rightSubTree = tree->right;
-            tree = NULL;
-            return rightSubTree;
+    } else {//value = tree->value        
+        if (tree->left == NULL || tree->right == NULL) {
+            PLBTreeNode *child = tree->left ? tree->left : tree->right;
+            if (child == NULL) {
+                // No child case
+                child = tree;
+                tree = NULL;
+                
+            } else {
+                *tree = *child;
+            }
+            delete child;
+        } else {
+            //node has two children
+            PLBTreeNode *inorderSuccessor = getInorderSuccessor(tree);
+            tree->value = inorderSuccessor->value;
+            tree->color = inorderSuccessor->color;
+            tree->right = removeNode(tree->right, inorderSuccessor->value);
         }
-        else if (tree->right == NULL) {
-            PLBTreeNode *leftSubTree = tree->left;
-            tree = NULL;
-            return leftSubTree;
-        }
-        //node has two children
-        PLBTreeNode *inorderSuccessor = getInorderSuccessor(tree);
-        tree->value = inorderSuccessor->value;
-        tree->color = inorderSuccessor->color;
-        tree->right = removeNode(tree->right, inorderSuccessor->value);
-        //TODO: to remove all the matching nodes
-//        if (inorderSuccessor->value == tree->value) {
-//            return removeNode(tree, tree->value);
-//        }
     }
 
     if (tree == NULL)

@@ -17,6 +17,10 @@ PLBTree::PLBTree(PLBTreeNode *rootNode) {
     root = rootNode;
 }
 
+PLBTree::~PLBTree() {
+    delete root;
+}
+
 int PLBTree::getValue() {
     return root->value;
 }

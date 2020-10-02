@@ -30,6 +30,11 @@ protected :
      * @param rootNode root node for the tree
      */
     PLBTree(PLBTreeNode *rootNode);
+    
+    /**
+     * Default destructor
+     */
+    ~PLBTree();
 public:
     /**
      * Initializes a tree with the given value & color for its root node.
