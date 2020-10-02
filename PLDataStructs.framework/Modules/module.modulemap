@@ -1,6 +1,0 @@
-framework module PLDataStructs {
-  umbrella header "PLDataStructs.h"
-
-  export *
-  module * { export * }
-}
