@@ -1,6 +1,6 @@
 # PLDataStructs
 
-`PLDataStructs` is a static library written in C++. This library provides user friendly APIs for the most common data structures used in programming.
+***PLDataStructs*** is a static library written in C++. This library provides user friendly APIs for the most common data structures used in programming.
 
 The current version of the library provides implementation for the folowing data structures -
 - **PLBalancedBTree** - Self balancing ordered binary trees. These are also called as AVL trees.
@@ -57,17 +57,17 @@ tree->removeNodes("#00FF00"); // removes all green nodes
 
 ### Printing the description of a tree -
 
-- Inorder description -
+- **Inorder description** -
 ```
 tree->printInOrder();
 ```
 
-- Preorder description -
+- **Preorder description** -
 ```
 tree->printPreOrder();
 ```
 
-- Postorder description -
+- **Postorder description** -
 ```
 tree->printPostOrder();
 ```
