@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2114AEB02527DD580033B704 /* PLDataStructs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2114AEAF2527DD580033B704 /* PLDataStructs.framework */; };
+		2114AEB12527DD580033B704 /* PLDataStructs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2114AEAF2527DD580033B704 /* PLDataStructs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		212710BD25275B3B008B6B9B /* PLTreeWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 212710BB25275B3B008B6B9B /* PLTreeWrapper.mm */; };
 		212710C52527611A008B6B9B /* UIColor+Trees.m in Sources */ = {isa = PBXBuildFile; fileRef = 212710C42527611A008B6B9B /* UIColor+Trees.m */; };
 		212710C825276141008B6B9B /* NSJSONSerialization+Trees.m in Sources */ = {isa = PBXBuildFile; fileRef = 212710C725276141008B6B9B /* NSJSONSerialization+Trees.m */; };
@@ -22,8 +24,6 @@
 		2160C75A251774A50037E767 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C759251774A50037E767 /* main.m */; };
 		2160C764251774A50037E767 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C763251774A50037E767 /* ExampleTests.m */; };
 		2160C76F251774A50037E767 /* ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160C76E251774A50037E767 /* ExampleUITests.m */; };
-		2160C78325177BBB0037E767 /* PLDataStructs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2160C78225177BBA0037E767 /* PLDataStructs.framework */; };
-		2160C78425177BBB0037E767 /* PLDataStructs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2160C78225177BBA0037E767 /* PLDataStructs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		21AC0FD725232D8300D36FA7 /* TreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AC0FD625232D8200D36FA7 /* TreeView.m */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2160C78425177BBB0037E767 /* PLDataStructs.framework in Embed Frameworks */,
+				2114AEB12527DD580033B704 /* PLDataStructs.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2114AEAF2527DD580033B704 /* PLDataStructs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PLDataStructs.framework; sourceTree = "<group>"; };
 		212710BB25275B3B008B6B9B /* PLTreeWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PLTreeWrapper.mm; sourceTree = "<group>"; };
 		212710BC25275B3B008B6B9B /* PLTreeWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTreeWrapper.h; sourceTree = "<group>"; };
 		212710C32527611A008B6B9B /* UIColor+Trees.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Trees.h"; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 		2160C76A251774A50037E767 /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2160C76E251774A50037E767 /* ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleUITests.m; sourceTree = "<group>"; };
 		2160C770251774A50037E767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2160C78225177BBA0037E767 /* PLDataStructs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLDataStructs.framework; path = ../PLDataStructs.framework; sourceTree = "<group>"; };
 		21AC0FD525232D8200D36FA7 /* TreeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeView.h; sourceTree = "<group>"; };
 		21AC0FD625232D8200D36FA7 /* TreeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2160C78325177BBB0037E767 /* PLDataStructs.framework in Frameworks */,
+				2114AEB02527DD580033B704 /* PLDataStructs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +218,7 @@
 		2160C78125177BBA0037E767 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2160C78225177BBA0037E767 /* PLDataStructs.framework */,
+				2114AEAF2527DD580033B704 /* PLDataStructs.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -544,7 +544,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../\"",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -562,7 +565,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../\"",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
