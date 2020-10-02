@@ -2,13 +2,14 @@
 
 `PLDataStructs` is a static library written in C++. This library provides user friendly APIs for the most common data structures used in programming.
 
-The current version of the library provides implementation for the self balancing ordrerd binary trees. These are also called as AVL trees.
+The current version of the library provides implementation for the folowing data structures -
+- **PLBalancedBTree** - Self balancing ordered binary trees. These are also called as AVL trees.
 
 ## Installation
 
-Simply download the static PLDataStructs.framework & import the framework in your Xcode project.
-
-Add `-lc++` in the target's build settings, under the `Other Linker Flags`, to let the xcode know that you want to link the c++ library code.  
+1. Simply download the static framework PLDataStructs.framework 
+2. Import the framework in your Xcode project.
+3. Add `-lc++` in the target's build settings, under the `Other Linker Flags`, to let the Xcode know that you want to link the C++ library code.  
 
 ## Usage
 
@@ -17,14 +18,14 @@ Add `-lc++` in the target's build settings, under the `Other Linker Flags`, to l
 #import <PLDataStructs/PLDataStructs.h>
 ```
 
-### Creating a self balancing ordered binary tree - `PLBalancedBTree`
+### Creating a self balancing ordered binary tree -
 
-Creating with a single root node having a value & color
+1. Creating with a single root node(having a value & color)
 ```
 PLBalancedBTree *tree = new PLBalancedBTree(5, "#FF0000");
 ```
 
-Creating with a list(`std::vector`) of nodes(first node being a root node) -
+2. Creating with a list(`std::vector`) of nodes(first node being a root node) -
 ```
 vector<PLTreeNodeData*> vector; 
 # create data for each node
@@ -49,30 +50,29 @@ tree->insertNode(10, "#23244");
 tree->removeNode(5);
 ```
 
-### Remove all node of a particular color from the tree -
+### Remove all nodes of a particular color from a tree -
 ```
 tree->removeNodes("#00FF00"); // removes all green nodes
 ```
 
 ### Printing the description of a tree -
-`PLDataStructs` provides following ways to print the description of a tree -
 
-Inorder description -
+- Inorder description -
 ```
 tree->printInOrder();
 ```
 
-Preorder description -
+- Preorder description -
 ```
 tree->printPreOrder();
 ```
 
-Postorder description -
+- Postorder description -
 ```
 tree->printPostOrder();
 ```
 
-Accessing tree properties/fields -
+### Accessing tree properties -
 ```
 // root's value
 int value = tree->getValue();
