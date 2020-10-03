@@ -1,4 +1,0 @@
-var dir_183c35d61c136b5938c1915d91226c57 =
-[
-    [ "PLDataStructs", "dir_9054365944346c7ea625f57cf2ae674c.html", "dir_9054365944346c7ea625f57cf2ae674c" ]
-];
