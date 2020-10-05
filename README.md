@@ -1,9 +1,11 @@
 # PLDataStructs
+![Design](http://www.plantuml.com/plantuml/png/xPB1Jy8m5CRFxgzeuCA699uND0GuQ39r4SEzRe-nM5hIlYqcwl_ksb2OtPZZxh93q-_tjQ_lUpE5L6AnOzwU9kyq0pA8eoL5ka9P9AZ8eqWB1WCoN9gFV7fN2QDAaJYQlqg0QeFORsWtdqGA9912O8iuQa1wvNidT7n4SuwafAo0Qw8m3KE5CkSPIGGJqgyRCi2rvaP-M7aSPQ7nIgaTuH3ta6TRR3L7iC5LyOQw7F_s9ZoK5ZZOYpxWBoxd2gH-RlVBjBqKULgtIjY94dvRkparwdNmlfBnWJ_B57IFMkLOGhSk5BO2tzvfN0m0QMDgnexMFtJ7P-0I4XHo6aTsnFGma-2ESDsIjL7zheX3fzBke3lfld7t2_l2g0rkuTP0vfHHdhGbuehz8t6D_vbSc8bjaPk74Upjfd7hPkbR-5Wq8ZbMMzzirEOwjg1xUgO64Z3Od1UbjThdLVy18DEloSIT4bSqwRcQCDBn5g-sRcWpu6cnOpy0)
 
 ***PLDataStructs*** is a static library written in C++. This library provides user friendly APIs for the most common data structures used in programming.
 
 The current version of the library provides implementation for the folowing data structures -
 - **PLBalancedBTree** - Self balancing ordered binary trees. These are also called as AVL trees.
+
 
 ## Installation
 
