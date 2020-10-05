@@ -12,7 +12,7 @@ The current version of the library provides implementation for the folowing data
 2. Import the framework in your Xcode project.
 3. Add `-lc++` in the target's build settings, under the `Other Linker Flags`, to let the Xcode know that you want to link the C++ library code.  
 
-### Building the framework from source code**
+### Building the framework from source code
 1. Clone the PLDataStructs git repo or download the source code.
 2. cd into the PLDataStructs project directory & open PLDataStructs.xcodeproj in Xcode
 3. Build the Framework-Universal target. It will build the static framework & open the directory where it's created(the same project directory).
@@ -20,6 +20,12 @@ The current version of the library provides implementation for the folowing data
 5. Add `-lc++` in the target's build settings, under the `Other Linker Flags`, to let the Xcode know that you want to link the C++ library code.
 
 ## Usage
+
+All the binary tree implementations of this library are inherited from `PLBTree`, a base class that defines the basic binary tree behaviours. Thus, they follow similar properties & APIs.
+
+However, the following guide demonstrates usage using `PLBalancedBTree`. If your implementation doesn't require a balanced tree, you may use `PLOrderedBTree` for a simple BST implementation.
+
+(Explore the [API reference](https://pritesh-lad.github.io/PLDataStructs/) for more details)
 
 ### Import the library header
 To use the data structures from this library, import the library header in your objective-C++ file.
