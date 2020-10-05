@@ -44,8 +44,6 @@ public:
      * @param color Root node's color in hex format(#RRGGBB)
      */
     PLBTree(int value, std::string color);
-
-    /// Tree properties
          
     /**
      * Returns value of the trees root node
@@ -85,8 +83,6 @@ public:
      */
     virtual PLBTree * getRightSubtree() = 0;
     
-    /// Tree operations
-
     /**
      * Pure virtual function to insert a node into current binary tree.
      *
@@ -120,9 +116,7 @@ public:
      * @see PLBalancedBTree
      */
     virtual void removeNodes(std::string color) = 0;
-    
-    /// Tree traversals
-     
+         
     /**
      * Prints inorder traversal of the binary tree.
      */

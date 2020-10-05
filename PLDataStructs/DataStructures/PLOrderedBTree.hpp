@@ -55,7 +55,6 @@ private:
     PLBTreeNode * removeNodes(PLBTreeNode *tree, std::string color);
     
 public :
-    /// Constructors
 
     /**
      * Initializes an ordered tree with the given value & color for its root node.
@@ -71,8 +70,6 @@ public :
      */
     PLOrderedBTree(std::vector<PLTreeNodeData*> nodesVector);
     
-    /// Virtual functions
-
     /**
      * @return The left subtree of the ordered binary tree.
      */

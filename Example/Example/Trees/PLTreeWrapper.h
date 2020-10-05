@@ -38,6 +38,11 @@ typedef NS_ENUM(NSInteger, PLTreeDescription) {
  */
 + (PLTreeWrapper*)balancedBTreeWithNodes:(NSArray<NSDictionary*>*)nodes;
 
+/**
+ * Creates an ordered binary tree implementation
+ * @param nodes NSArray containing dictionary, where each dictionary has 'value' & 'color'
+ * @return An ordered binary tree
+ */
 + (PLTreeWrapper*)orderedBTreeWithNodes:(NSArray*)nodes;
 
 //Operations

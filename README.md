@@ -15,7 +15,7 @@ The current version of the library provides implementation for the folowing data
 3. Add `-lc++` in the target's build settings, under the `Other Linker Flags`, to let the Xcode know that you want to link the C++ library code.  
 
 ### Building the framework from source code
-1. Clone the PLDataStructs git repo or download the source code.
+1. Clone the [PLDataStructs git repo](https://github.com/Pritesh-Lad/PLDataStructs.git) or download the source code.
 2. cd into the PLDataStructs project directory & open PLDataStructs.xcodeproj in Xcode
 3. Build the Framework-Universal target. It will build the static framework & open the directory where it's created(the same project directory).
 4. Import this framework into your Xcode project
@@ -108,7 +108,7 @@ PLBalancedBTree *right = tree->getRightSubtree();
 ```
 
 ## API documentation
-A detailed API documentation is available [here](https://pritesh-lad.github.io/PLDataStructs/)
+A detailed API documentation is available [here](https://pritesh-lad.github.io/PLDataStructs/annotated.html)
 
 ## Example
 You may also refer the [sample Xcode project](https://github.com/Pritesh-Lad/PLDataStructs/tree/master/Example) demonstrating the use of the library.
