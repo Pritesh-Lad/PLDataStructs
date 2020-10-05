@@ -94,18 +94,32 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </ul>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Installation</h1>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Pre-built .framework package</h2>
 <ol type="1">
 <li>Simply download the static framework <a href="https://github.com/Pritesh-Lad/PLDataStructs/releases/download/v1.0.0/PLDataStructs_framework.zip">PLDataStructs.framework</a></li>
 <li>Import the framework in your Xcode project.</li>
 <li>Add <code>-lc++</code> in the target's build settings, under the <code>Other Linker Flags</code>, to let the Xcode know that you want to link the C++ library code. <br  />
 </li>
 </ol>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Usage</h1>
 <h2><a class="anchor" id="autotoc_md3"></a>
+Building the framework from source code</h2>
+<ol type="1">
+<li>Clone the PLDataStructs git repo or download the source code.</li>
+<li>cd into the PLDataStructs project directory &amp; open PLDataStructs.xcodeproj in Xcode</li>
+<li>Build the Framework-Universal target. It will build the static framework &amp; open the directory where it's created(the same project directory).</li>
+<li>Import this framework into your Xcode project</li>
+<li>Add <code>-lc++</code> in the target's build settings, under the <code>Other Linker Flags</code>, to let the Xcode know that you want to link the C++ library code.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Usage</h1>
+<p>All the binary tree implementations of this library are inherited from <code><a class="el" href="class_p_l_b_tree.html">PLBTree</a></code>, a base class that defines the basic binary tree behaviours. Thus, they follow similar properties &amp; APIs.</p>
+<p>However, the following guide demonstrates usage using <code><a class="el" href="class_p_l_balanced_b_tree.html">PLBalancedBTree</a></code>. If your implementation doesn't require a balanced tree, you may use <code><a class="el" href="class_p_l_ordered_b_tree.html">PLOrderedBTree</a></code> for a simple BST implementation.</p>
+<p>(Explore the <a href="https://pritesh-lad.github.io/PLDataStructs/">API reference</a> for more details)</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Import the library header</h2>
-<div class="fragment"><div class="line">#import &lt;PLDataStructs/PLDataStructs.h&gt;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+<p>To use the data structures from this library, import the library header in your objective-C++ file. </p><div class="fragment"><div class="line">#import &lt;PLDataStructs/PLDataStructs.h&gt;</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
 Creating a self balancing ordered binary tree -</h2>
 <ol type="1">
 <li>Creating with a single root node(having a value &amp; color) <div class="fragment"><div class="line">PLBalancedBTree *tree = new PLBalancedBTree(5, &quot;#FF0000&quot;);</div>
@@ -123,16 +137,16 @@ Creating a self balancing ordered binary tree -</h2>
 <div class="line">PLBalancedBTree *tree = new PLBalancedBTree(vector);</div>
 </div><!-- fragment --></li>
 </ol>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Adding a new node to a tree -</h2>
 <div class="fragment"><div class="line">tree-&gt;insertNode(10, &quot;#00FF00&quot;);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
 Remove a node from a tree -</h2>
 <div class="fragment"><div class="line">tree-&gt;removeNode(5);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
 Remove all nodes of a particular color from a tree -</h2>
 <div class="fragment"><div class="line">tree-&gt;removeNodes(&quot;#00FF00&quot;); // removes all green nodes</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
 Printing the description of a tree -</h2>
 <ul>
 <li><b>Inorder description</b> - <div class="fragment"><div class="line">tree-&gt;printInOrder();</div>
@@ -142,7 +156,7 @@ Printing the description of a tree -</h2>
 <li><b>Postorder description</b> - <div class="fragment"><div class="line">tree-&gt;printPostOrder();</div>
 </div><!-- fragment --></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Accessing tree properties -</h2>
 <div class="fragment"><div class="line">// root&#39;s value</div>
 <div class="line">int value = tree-&gt;getValue();</div>
@@ -158,10 +172,10 @@ Accessing tree properties -</h2>
 <div class="line"> </div>
 <div class="line">// right subtree</div>
 <div class="line">PLBalancedBTree *right = tree-&gt;getRightSubtree();</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md12"></a>
 API documentation</h1>
 <p>A detailed API documentation is available <a href="https://pritesh-lad.github.io/PLDataStructs/">here</a></p>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 Example</h1>
 <p>You may also refer the <a href="https://github.com/Pritesh-Lad/PLDataStructs/tree/master/Example">sample Xcode project</a> demonstrating the use of the library. </p>
 </div></div><!-- PageDoc -->

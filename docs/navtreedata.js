@@ -25,18 +25,21 @@
 var NAVTREE =
 [
   [ "PLDataStructs", "index.html", [
-    [ "Installation", "index.html#autotoc_md1", null ],
-    [ "Usage", "index.html#autotoc_md2", [
-      [ "Import the library header", "index.html#autotoc_md3", null ],
-      [ "Creating a self balancing ordered binary tree -", "index.html#autotoc_md4", null ],
-      [ "Adding a new node to a tree -", "index.html#autotoc_md5", null ],
-      [ "Remove a node from a tree -", "index.html#autotoc_md6", null ],
-      [ "Remove all nodes of a particular color from a tree -", "index.html#autotoc_md7", null ],
-      [ "Printing the description of a tree -", "index.html#autotoc_md8", null ],
-      [ "Accessing tree properties -", "index.html#autotoc_md9", null ]
+    [ "Installation", "index.html#autotoc_md1", [
+      [ "Pre-built .framework package", "index.html#autotoc_md2", null ],
+      [ "Building the framework from source code", "index.html#autotoc_md3", null ]
     ] ],
-    [ "API documentation", "index.html#autotoc_md10", null ],
-    [ "Example", "index.html#autotoc_md11", null ],
+    [ "Usage", "index.html#autotoc_md4", [
+      [ "Import the library header", "index.html#autotoc_md5", null ],
+      [ "Creating a self balancing ordered binary tree -", "index.html#autotoc_md6", null ],
+      [ "Adding a new node to a tree -", "index.html#autotoc_md7", null ],
+      [ "Remove a node from a tree -", "index.html#autotoc_md8", null ],
+      [ "Remove all nodes of a particular color from a tree -", "index.html#autotoc_md9", null ],
+      [ "Printing the description of a tree -", "index.html#autotoc_md10", null ],
+      [ "Accessing tree properties -", "index.html#autotoc_md11", null ]
+    ] ],
+    [ "API documentation", "index.html#autotoc_md12", null ],
+    [ "Example", "index.html#autotoc_md13", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
