@@ -70,7 +70,7 @@ PLBTreeNode * PLOrderedBTree::insertNode(PLBTreeNode *tree, int value, std::stri
     // Increase the height of the parent node by 1
     tree->height = max(heightOfTree(tree->left), heightOfTree(tree->right)) + 1;
     
-    // Tree is already height-balanced, return the updated tree
+    // Return the updated tree
     return tree;
 }
 
@@ -111,7 +111,6 @@ PLBTreeNode * PLOrderedBTree::removeNode(PLBTreeNode *tree, int value) {
     
     if (tree == NULL)
         return tree;
-    // Re-balance the tree
     // Update the height of current node
     tree->height = 1 + max(heightOfTree(tree->left),
                            heightOfTree(tree->right));
