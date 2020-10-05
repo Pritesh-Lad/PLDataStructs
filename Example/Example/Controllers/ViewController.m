@@ -13,7 +13,7 @@
 #define CREATE_TREE_FILE_NAME    @"CreateTree"
 #define ADD_NODES_FILE_NAME      @"AddNodes"
 #define REMOVE_NODES_FILE_NAME   @"RemoveNodes"
-
+#define MAX_TREE_WIDTH  5461
 @interface ViewController ()
 @property (nonatomic, strong) PLTreeWrapper *tree;
 @property (nonatomic, strong) TreeView *treeView;
@@ -53,8 +53,10 @@
         [self.treeView removeFromSuperview];
         self.treeView = nil;
     }
-    CGFloat deltaX = pow(2, self.tree.height-1)-1;;
-    CGSize contentSize = CGSizeMake(2*deltaX*NODE_SEPARATION + 50, self.tree.height*NODE_SEPARATION + 50);
+    CGFloat deltaX = pow(2, self.tree.height-1)-1;
+    CGFloat width = MIN(MAX_TREE_WIDTH, 2*deltaX*NODE_SEPARATION + 50);
+    CGFloat height = MIN(MAX_TREE_WIDTH, self.tree.height*NODE_SEPARATION + 50);
+    CGSize contentSize = CGSizeMake(width, height);
     // Create the tree view & render the tree.
     _treeView = [[TreeView alloc] initWithFrame:CGRectMake(0, 0, contentSize.width, contentSize.height) tree:self.tree];
     [self.scrollView setContentSize:contentSize];

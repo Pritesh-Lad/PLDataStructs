@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char PLDataStructsVersionString[];
 #import <PLDataStructs/PLBTree.hpp>
 #import <PLDataStructs/PLTreeNodeData.hpp>
 #import <PLDataStructs/PLBalancedBTree.hpp>
+#import <PLDataStructs/PLOrderedBTree.hpp>

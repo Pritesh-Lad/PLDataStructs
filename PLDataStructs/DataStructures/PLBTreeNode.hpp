@@ -6,8 +6,8 @@
 //  Copyright © 2020 pritesh. All rights reserved.
 //
 
-#ifndef PLOrderedBTree_hpp
-#define PLOrderedBTree_hpp
+#ifndef PLBTreeNode_hpp
+#define PLBTreeNode_hpp
 
 #include <stdio.h>
 #include <string>
@@ -37,9 +37,7 @@ public:
      * @param nodeValue integer value for node
      * @param hexColor color in hex format(#RRGGBB)
      */
-    PLBTreeNode(int nodeValue, std::string hexColor);
-    
-    ~PLBTreeNode();
+    PLBTreeNode(int nodeValue, std::string hexColor);    
 };
 
-#endif /* PLOrderedBTree_hpp */
+#endif /* PLBTreeNode_hpp */

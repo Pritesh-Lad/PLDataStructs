@@ -18,7 +18,7 @@
 
 @implementation PLTreeWrapper
 
-+ (PLTreeWrapper*)balancedBTreeWithNodes:(NSArray*)nodes{
++ (std::vector<PLTreeNodeData*>)vectorOfNodes:(NSArray*)nodes {
     std::vector<PLTreeNodeData*> nodeVector;
     for (NSDictionary *node in nodes) {
         int value = [node[NODE_VAL_KEY] intValue];
@@ -26,7 +26,16 @@
         PLTreeNodeData *nodeData = new PLTreeNodeData(value, [color cStringUsingEncoding:[NSString defaultCStringEncoding]]);
         nodeVector.push_back(nodeData);
     }
-    PLBalancedBTree *tree = new PLBalancedBTree(nodeVector);
+    return nodeVector;
+}
+
++ (PLTreeWrapper*)balancedBTreeWithNodes:(NSArray*)nodes {
+    PLBalancedBTree *tree = new PLBalancedBTree([PLTreeWrapper vectorOfNodes:nodes]);
+    return [[PLTreeWrapper alloc] initWithBTree:tree];
+}
+
++ (PLTreeWrapper*)orderedBTreeWithNodes:(NSArray*)nodes {
+    PLOrderedBTree *tree = new PLOrderedBTree([PLTreeWrapper vectorOfNodes:nodes]);
     return [[PLTreeWrapper alloc] initWithBTree:tree];
 }
 
