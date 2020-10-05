@@ -38,6 +38,8 @@ typedef NS_ENUM(NSInteger, PLTreeDescription) {
  */
 + (PLTreeWrapper*)balancedBTreeWithNodes:(NSArray<NSDictionary*>*)nodes;
 
++ (PLTreeWrapper*)orderedBTreeWithNodes:(NSArray*)nodes;
+
 //Operations
 
 /**
